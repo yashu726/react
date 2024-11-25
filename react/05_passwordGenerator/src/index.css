@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.toast {
+    position: fixed;
+    top: 55px;
+    left: 63%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: toastAnimation 0.5s ease-in-out forwards;
+  }
+  
+  /* Toast fade-in animation */
+  @keyframes toastAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
